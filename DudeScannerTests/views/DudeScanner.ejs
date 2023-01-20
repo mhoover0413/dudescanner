@@ -18,17 +18,6 @@
 
 </h4>
 <body>
-    LIST OF PEOPLES:
-    <br>
-    -------------------------
-    <br>
-    <br>
-    <% for (let i=0; i < ejsData.students.length; i++) { %>
-        Name: <%= ejsData.students[i].name %> <br>
-        ID: <%= ejsData.students[i].id %> <br>
-        Status: <%= ejsData.students[i].status %> <br>
-        <br>
-    <% } %>
     LIST OF PEOPLE OUT: <br>
     -------------------------------
     <br> <br> Last ID: <%= Here; %>
@@ -49,6 +38,18 @@
                 <% break; %>
             <% } %>
         <% } %>
+    <% } %>
+    <br> <br> 
+    LIST OF PEOPLES:
+    <br>
+    -------------------------
+    <br>
+    <br>
+    <% for (let i=0; i < ejsData.students.length; i++) { %>
+        Name: <%= ejsData.students[i].name %> <br>
+        ID: <%= ejsData.students[i].id %> <br>
+        Status: <%= ejsData.students[i].status %> <br>
+        <br>
     <% } %>
 </body>
 
