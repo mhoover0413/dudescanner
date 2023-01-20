@@ -6,14 +6,13 @@
     <title>Document</title>
     <script>
         var currentId = document.getElementById("10")
+        for (let i = 0; i < ejsData.students.length; i++) {
+            ejsData.students[currentId].FirstName
+        }
     </script>
 </head>
 <body>
-    <% for (let i = 0; i < ejsData.students.length; i++) { %>
-        <% var id = currentId %>
-        <%= ejsData.students[id].FirstName %>
-        <br>
-    <% } %>
+    <label for="First name:"></label>
     <input type="text" id="10"></input>
 </body>
 </html>
