@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h3>
+    Current Customers Here:
+</h3>
+
+<h4 name="ere">
+    <br>
+    <form action="/DudeScanner" method="POST">
+        Place Cursor on Text and Click, Scan To Enter ID <input type="text" id="IDText" name="tooot"></input>
+    </form>
+
+</h4>
+<body>
+    LIST OF PEOPLES:
+    <br>
+    -------------------------
+    <br>
+    <br>
+    <% for (let i=0; i < ejsData.students.length; i++) { %>
+        Name: <%= ejsData.students[i].name %> <br>
+        ID: <%= ejsData.students[i].id %> <br>
+        Status: <%= ejsData.students[i].status %> <br>
+        <br>
+    <% } %>
+    LIST OF PEOPLE OUT: <br>
+    -------------------------------
+    <br> <br> Last ID: <%= Here; %>
+    <% for (let i=0; i < ejsData.students.length; i++) { %>
+        <% if (ejsData.students[i].id == Here) { %>
+            <br>
+            Last Person: <%= ejsData.students[i].name %>
+            <% if (ejsData.students[i].status == "Leaving") { %>
+                <% ejsData.students[i].status = "Back Here" %>
+                <br>
+                Status: <%= ejsData.students[i].status %>
+                <% break; %>
+            <% } %>
+            <% if (ejsData.students[i].status == "Back Here") { %>
+                <% ejsData.students[i].status = "Leaving" %>
+                <br>
+                Status: <%= ejsData.students[i].status %>
+                <% break; %>
+            <% } %>
+        <% } %>
+    <% } %>
+</body>
+
+</html>
