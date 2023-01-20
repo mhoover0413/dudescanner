@@ -7,7 +7,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 var students = JSON.parse(fs.readFileSync('peoples.json'));
 app.get('/', (req, res) => {
-    res.render('DudeScanner', { ejsData: students });
+    const { tooot } = req.body;
+    console.log(tooot)
+    res.render('DudeScanner', { ejsData: students, Here: tooot });
 });
 app.post('/DudeScanner', (req, res) => {
     const { tooot } = req.body;

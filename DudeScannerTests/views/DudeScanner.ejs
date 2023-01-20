@@ -15,26 +15,33 @@
     <form action="/DudeScanner" method="POST">
         Place Cursor on Text and Click, Scan To Enter ID <input type="text" id="IDText" name="tooot"></input>
     </form>
+    <br>
+    Misplaced Your Tag?
+    Enter your full name and last name initial below!
+    <form action="/DudeScanner" method="POST">
 
+    </form>
 </h4>
 <body>
     LIST OF PEOPLE OUT: <br>
     -------------------------------
-    <br> <br> Last ID: <%= Here; %>
     <% for (let i=0; i < ejsData.students.length; i++) { %>
         <% if (ejsData.students[i].id == Here) { %>
             <br>
-            Last Person: <%= ejsData.students[i].name %>
             <% if (ejsData.students[i].status == "Leaving") { %>
+                <br> <br> Last ID: <%= //Here; %> <br>
                 <% ejsData.students[i].status = "Back Here" %>
+                Last Person: <%= //ejsData.students[i].name %>
                 <br>
-                Status: <%= ejsData.students[i].status %>
+                Last Status: <%= //ejsData.students[i].status %>
                 <% break; %>
             <% } %>
             <% if (ejsData.students[i].status == "Back Here") { %>
+                <br> <br> Last ID: <%= Here; %> <br>
                 <% ejsData.students[i].status = "Leaving" %>
+                Last Person: <%= ejsData.students[i].name %>
                 <br>
-                Status: <%= ejsData.students[i].status %>
+                Last Status: <%= ejsData.students[i].status %>
                 <% break; %>
             <% } %>
         <% } %>
