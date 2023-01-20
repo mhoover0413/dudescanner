@@ -1,0 +1,16 @@
+{
+    "students": [
+        {
+            "FirstName": "Luke",
+            "LastName": "Thompson",
+            "ID":"24279",
+            "Status":"In Class"
+        },
+        {
+            "FirstName": "Logan",
+            "LastName": "Cruz",
+            "ID":"24378",
+            "Status":"In Class"
+        }
+    ]
+}
